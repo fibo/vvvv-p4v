@@ -25,9 +25,17 @@ Install p4v should be as easy as copyng the p4v.v4p pach in your empty folder.
 p4v.v4p is separated from your root patch, to run it you need to open it explicitly.
 
 If you install package Pippo, p4v will try to
-    1. look for Pippo in the registry
-    2. get the .zip url associated with Pippo package: this can be a url pointing to the github repo .zip file 
-    3. unzip that file in the current folder and then remove it
+    1. look for Pippo in the packages folder
+    2. pick last folder yyyymmdd 
+    3. copy the content in current folder
+
+p4v should be able to install package from locally
+Maybe the easier thing is to put a "packages" folder inside p4v and use git to clone p4v repo and download all modules
+packages folder should look like this
+
+packages/<package name>/yyyymmdd
+
+any contributor could add packages to p4v repo. It could also be used the git submodule feature.
 
 
 TODO
