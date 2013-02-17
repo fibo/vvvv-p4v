@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha29.3.dtd" >
    <PATCH nodename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p" systemname="p4v" filename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p">
    <BOUNDS type="Window" left="0" top="0" width="9000" height="6000">
    </BOUNDS>
@@ -34,6 +34,10 @@
    <PIN pinname="Proxy" visible="-1" pintype="Input" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Proxy Port" visible="-1" pintype="Input" slicecount="1" values="8080">
+   </PIN>
+   <PIN pinname="Body" visible="1">
+   </PIN>
+   <PIN pinname="Success" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
@@ -112,10 +116,10 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Status" dstnodeid="5" dstpinname="Input String">
    </LINK>
-   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="6">
-   <BOUNDS type="Node" left="210" top="5730" width="100" height="100">
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="7350" top="30" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="210" top="5730" width="2400" height="1800">
+   <BOUNDS type="Box" left="7350" top="30" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="0" top="5985" width="9000" height="5340">
    </BOUNDS>
@@ -164,6 +168,56 @@
    <PIN pinname="ID" visible="0" pintype="Output">
    </PIN>
    <PIN pinname="String Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="Writer (Raw)" nodename="Writer (Raw)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="2415" top="3870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="foo.zip">
+   </PIN>
+   <PIN pinname="Write" visible="1">
+   </PIN>
+   <PIN pinname="Append" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Body" dstnodeid="8" dstpinname="Content">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Success" dstnodeid="8" dstpinname="Write">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2895" top="2580" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2895" top="2580" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="foo.zip">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="file.txt">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Text Formats (*.csv, *.dtd, *.html, *.txt, *.xml)||*.csv;*.dtd;*.html;*.htm;*.txt;*.xml||Text (*.txt)||*.txt||XML (*.xml)||*.xml||CSV (*.csv)||*.csv||DTD (*.dtd)||*.dtd||HTML (*.html, *.htm)||*.html;*.htm|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="8" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2985" top="3720" width="4470" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2985" top="3720" width="2400" height="540">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|if the HTTP get is successful, write the response body in a file|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
    </PATCH>
