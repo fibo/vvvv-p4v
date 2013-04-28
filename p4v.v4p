@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
    <PATCH nodename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p" systemname="p4v" filename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p">
-   <BOUNDS type="Window" left="465" top="615" width="12450" height="6795">
+   <BOUNDS type="Window" left="465" top="615" width="12450" height="8790">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Node" left="15" top="30" width="2445" height="270">
@@ -215,7 +215,7 @@
    <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="9795" top="3405" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Folder" slicecount="1" values="CurrentPatch">
+   <PIN pinname="Folder" slicecount="1" values="Application">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -251,13 +251,15 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
+   <PIN pinname="Simulate" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Bang" dstnodeid="20" dstpinname="Create">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="22" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="9450" top="4845" width="4470" height="270">
+   <BOUNDS type="Node" left="9825" top="4965" width="4470" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="9450" top="4845" width="2400" height="540">
+   <BOUNDS type="Box" left="9825" top="4965" width="2400" height="540">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Create p4v folder on open|">
    </PIN>
@@ -320,8 +322,6 @@
    <PIN pinname="Intersperse" slicecount="1" values="DosPath">
    </PIN>
    </NODE>
-   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="16" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="30" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
@@ -337,9 +337,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="33">
-   <BOUNDS type="Node" left="8655" top="3420" width="100" height="100">
+   <BOUNDS type="Node" left="7515" top="3615" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8655" top="3420" width="1275" height="915">
+   <BOUNDS type="Box" left="7515" top="3615" width="1275" height="915">
    </BOUNDS>
    <PIN pinname="Input String" visible="1" slicecount="1" values="|The specified file was not found|">
    </PIN>
@@ -368,8 +368,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="16" dstpinname="Input 3">
-   </LINK>
    <NODE systemname="DropDown (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\DropDown (String).dll" nodename="DropDown (String)" componentmode="InABox" id="36">
    <BOUNDS type="Node" left="7035" top="345" width="100" height="100">
    </BOUNDS>
@@ -397,7 +395,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="8100" top="1215" width="3210" height="345">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Requires to copy 7za.exe in your sistem32|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Ho rinominato 7za.exe in 7za|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -409,13 +407,13 @@
    <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="40">
    <BOUNDS type="Node" left="5940" top="2685" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Folder" slicecount="1" values="WindowsSystem">
+   <PIN pinname="Folder" slicecount="1" values="Application">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="5805" top="3165" width="100" height="100">
+   <BOUNDS type="Node" left="7230" top="2310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -423,9 +421,13 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="DosPath">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="41" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="41" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="34" dstpinname="Input 2">
@@ -450,35 +452,21 @@
    </NODE>
    <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="43" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="ShellExecute (Windows)" nodename="ShellExecute (Windows)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="7920" top="2610" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Commandline Arguments" visible="1">
+   <PIN pinname="Commandline Arguments" visible="1" slicecount="1" values="|&quot;%ProgramFiles%\7-Zip\7z.exe&quot; x p4v\ChaosToys.zip C:\Users\Gianluca\Dropbox\vvvvjing\DirectX11\vvvv\vvvv_45beta29.2_x86\p4v effects* modules* plugins* -r|">
+   </PIN>
+   <PIN pinname="Block until finished" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Window" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="File" slicecount="1" visible="1" values="..\..\Dropbox\vvvvjing\DirectX11\vvvv\vvvv_45beta29.2_x86\p4v\unzip.bat">
    </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="44" dstpinname="Do Execute">
    </LINK>
    <LINK srcnodeid="44" srcpinname="Result" dstnodeid="33" dstpinname="Input String">
-   </LINK>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="10500" top="7140" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse" slicecount="1" values="Space">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="45" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="45" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="45" srcpinname="Output" dstnodeid="44" dstpinname="Commandline Arguments">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="46" systemname="IOBox (String)">
    <BOUNDS type="Node" left="10260" top="375" width="2400" height="690">
@@ -486,6 +474,132 @@
    <BOUNDS type="Box" left="10260" top="375" width="2400" height="690">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Da riga di comando mi funziona&cr;&lf;&cr;&lf;ma con shell execute no|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="5115" top="5985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="p4v">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="pippo.zip">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="DosPath">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="47" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="16" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="16" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="48" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="330" top="7350" width="5745" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="330" top="7350" width="5745" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO : va bene anche fare tutto in una cartella p4v che sta sotto quella di VVVV|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="49" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="390" top="6765" width="4740" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="390" top="6765" width="4740" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: prova con unzip.bat con un pause in fondo per debuggare|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="50" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="315" top="5520" width="5775" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="315" top="5520" width="5775" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: alla fine uso solo le contribution, l&apos; utente carica il suo zip tramite il sito|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="51" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="315" top="5880" width="5895" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="315" top="5880" width="5895" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO : chiedi integrazione lato web del sito per poter avere un indice aggiornato|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="6255" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" visible="-1" pintype="Input" values="x">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="Space">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="C:\Users\Gianluca\github.com\vvvv-p4v\p4v">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Commandline Arguments|">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="effects*">
+   </PIN>
+   <PIN pinname="Input 5" slicecount="1" values="modules*">
+   </PIN>
+   <PIN pinname="Input 6" slicecount="1" values="plugins*">
+   </PIN>
+   <PIN pinname="Input 7" slicecount="1" values="-r">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="52" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="44" dstpinname="Commandline Arguments">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="41" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="44" dstpinname="File">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="53" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3420" top="405" width="3390" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3420" top="405" width="3450" height="1185">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: vedi la questione licenze, per il 7za.exe:&cr;&lf;&cr;&lf;La cosa migliore è dare istruzioni di installazione, cioè scaricare 7za e scompattarlo dentro p4v a mano&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
