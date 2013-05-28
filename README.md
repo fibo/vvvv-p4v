@@ -44,7 +44,8 @@ TODO
 * contextual menu: p4v here, so you can create an empty folder and start a project.
 * interact with webdevvvvs to create a CVAN (Comprehensive Vvvv Archive Network)and host it on vvvv.org
 * upload a contribution
+* add noir to contributors and say thank for the logo
 
 [1]: http://vvvv.org "vvvv - a multipurpose toolkit"
-[2] http://vvvv.org/documentation/nodes-and-paths"vvvv documentation - nodes and paths]
+[2]: http://vvvv.org/documentation/nodes-and-paths "vvvv documentation - nodes and paths"
 
