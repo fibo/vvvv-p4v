@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.2.dtd" >
    <PATCH nodename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p" systemname="p4v" filename="C:\Users\Gianluca\github.com\vvvv-p4v\p4v.v4p">
    <BOUNDS type="Window" left="465" top="615" width="11160" height="5955">
    </BOUNDS>
@@ -141,9 +141,9 @@
    <LINK srcnodeid="1" srcpinname="Success" dstnodeid="8" dstpinname="Write">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="4230" top="8490" width="0" height="0">
+   <BOUNDS type="Node" left="3315" top="6870" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="4230" top="8490" width="1545" height="285">
+   <BOUNDS type="Box" left="3315" top="6870" width="1545" height="285">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\Dropbox\vvvvjing\DirectX11\vvvv\vvvv_45beta30_x86\packs\p4v\ChaosToys.zip">
    </PIN>
@@ -191,11 +191,11 @@
    <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="8145" top="8745" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Folder" slicecount="1" visible="-1" pintype="Input" values="Application">
+   <PIN pinname="Folder" slicecount="1" visible="-1" pintype="Input" values="Programs">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VVVV">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Programs">
    </PIN>
    <PIN pinname="Do Rescan" visible="-1" pintype="Input" slicecount="1" values="0">
    </PIN>
@@ -207,11 +207,11 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" visible="-1" pintype="Input" values="packs\p4v">
+   <PIN pinname="Input 2" slicecount="1" visible="-1" pintype="Input" values="vvvv-p4v">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|p4v Dir|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|vvvv-p4v Dir|">
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
@@ -231,7 +231,7 @@
    </PIN>
    <PIN pinname="Rename" visible="-1" pintype="Input" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Exists" visible="-1" pintype="Output">
+   <PIN pinname="Exists" visible="1" pintype="Output">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="20" dstpinname="Directory">
@@ -291,7 +291,7 @@
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="28">
    <BOUNDS type="Node" left="4995" top="5910" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values=".zip" visible="-1" pintype="Input">
+   <PIN pinname="Input 2" slicecount="1" visible="-1" pintype="Input" values=".zip">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -305,7 +305,7 @@
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="33">
    <BOUNDS type="Node" left="8160" top="12915" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8160" top="12915" width="315" height="240">
+   <BOUNDS type="Box" left="8160" top="12915" width="4680" height="1020">
    </BOUNDS>
    <PIN pinname="Input String" visible="1" slicecount="1" values="|The specified file was not found|">
    </PIN>
@@ -357,7 +357,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="7">
    </PIN>
-   <PIN pinname="Input 3" visible="-1" slicecount="1" values="||" pintype="Input">
+   <PIN pinname="Input 3" visible="-1" slicecount="1" pintype="Input" values="||">
    </PIN>
    <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
    </PIN>
@@ -365,20 +365,16 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Commandline Arguments|">
    </PIN>
-   <PIN pinname="Input 4" slicecount="1" values="effects*" visible="-1" pintype="Input">
+   <PIN pinname="Input 4" slicecount="1" visible="-1" pintype="Input" values="effects*">
    </PIN>
-   <PIN pinname="Input 5" slicecount="1" values="modules*" visible="-1" pintype="Input">
+   <PIN pinname="Input 5" slicecount="1" visible="-1" pintype="Input" values="modules*">
    </PIN>
-   <PIN pinname="Input 6" slicecount="1" values="plugins*" visible="-1" pintype="Input">
+   <PIN pinname="Input 6" slicecount="1" visible="-1" pintype="Input" values="plugins*">
    </PIN>
-   <PIN pinname="Input 7" slicecount="1" values="-r" visible="-1" pintype="Input">
+   <PIN pinname="Input 7" slicecount="1" visible="-1" pintype="Input" values="-r">
    </PIN>
    </NODE>
-   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="52" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="44" dstpinname="Commandline Arguments">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="41" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="41" srcpinname="Output" dstnodeid="44" dstpinname="File">
    </LINK>
@@ -387,61 +383,13 @@
    </BOUNDS>
    <BOUNDS type="Box" left="690" top="9915" width="3465" height="885">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: for unzipping by now I&apos;m using 7za.exe.&cr;&lf;&cr;&lf;Should be usefull a native unzip node.|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: for unzipping by now I&apos;m using 7za.exe.&cr;&lf;&cr;&lf;Should be cool have a native unzip node.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="56" systemname="IOBox (String)" exposed="1">
-   <BOUNDS type="Node" left="540" top="1005" width="1125" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="540" top="1005" width="4155" height="1590">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Requirements&cr;&lf;==========&cr;&lf;&cr;&lf;* The addonpack&cr;&lf;* Command line 7zip&cr;&lf;  1. download &quot;7-Zip Command Line Version&quot; from here (click on &quot;open&quot;)|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="57" systemname="IOBox (String)" exposed="0">
-   <BOUNDS type="Node" left="1245" top="2625" width="2805" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1245" top="2625" width="2805" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="http://www.7-zip.org/download.html">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="URL">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="60" systemname="IOBox (String)" exposed="1">
-   <BOUNDS type="Node" left="630" top="2970" width="3255" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="630" top="2970" width="3255" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|2. extract 7za.exe in VVVV\packs\p4v folder|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
    </PIN>
    </NODE>
    <NODE id="30" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
@@ -453,13 +401,11 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Intersperse" slicecount="1" values="DosPath" visible="-1" pintype="Input">
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="DosPath">
    </PIN>
    <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="30" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="30" dstpinname="Input 2">
@@ -469,7 +415,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5505" top="1005" width="3420" height="1965">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Current beahviour (by now) is:&cr;&lf;&cr;&lf;on open it downloads package zip url&cr;&lf;&cr;&lf;then bang this to unzip it under packs\p4v --&gt;&cr;&lf;&cr;&lf;then add the path manually to your nodelist&cr;&lf;|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Current beahviour (by now) is:&cr;&lf;&cr;&lf;on open it downloads package zip url&cr;&lf;&cr;&lf;then bang this to unzip it under packs Dir --&gt;&cr;&lf;&cr;&lf;then add the path manually to your nodelist&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -478,4 +424,368 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="70" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="690" top="9405" width="5970" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="690" top="9405" width="5970" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: reuse patch to do HTTP get and create Get (Network) module for addonpack|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="73" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2505" top="12795" width="5160" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2505" top="12795" width="5160" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="https://www.dropbox.com/sh/7gemhbiedjcf76o/8gZGXVV-nW/7za.exe">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|7za.exe from fibo&apos;s Dropbox|">
+   </PIN>
+   </NODE>
+   <NODE systemname="SystemFolder (File)" nodename="SystemFolder (File)" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="6735" top="6720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Folder" slicecount="1" visible="-1" pintype="Input" values="CurrentPatch">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="CurrentPatch">
+   </PIN>
+   <PIN pinname="Do Rescan" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="HTTP (Network Get)" nodename="HTTP (Network Get)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="2475" top="14940" width="4740" height="270">
+   </BOUNDS>
+   <PIN pinname="Refresh">
+   </PIN>
+   <PIN pinname="Name" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Value" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Username" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Password" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Proxy" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Proxy Port" visible="-1" pintype="Input" slicecount="1" values="8080">
+   </PIN>
+   <PIN pinname="Body" visible="1">
+   </PIN>
+   <PIN pinname="Success" visible="1">
+   </PIN>
+   <PIN pinname="Header" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Fail" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="URL" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7155" top="14025" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7155" top="14025" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Refresh">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="84" dstpinname="Refresh">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7455" top="15150" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7455" top="15150" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Success">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Success" dstnodeid="82" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="81" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2475" top="15900" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2475" top="15900" width="1695" height="345">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Status">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Status" dstnodeid="81" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Writer (Raw)" nodename="Writer (Raw)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="4815" top="16515" width="2400" height="270">
+   </BOUNDS>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Write" visible="1">
+   </PIN>
+   <PIN pinname="Append" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Body" dstnodeid="80" dstpinname="Content">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Success" dstnodeid="80" dstpinname="Write">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="79" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5940" top="15495" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5940" top="15495" width="1545" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="file.txt">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Text Formats (*.csv, *.dtd, *.html, *.txt, *.xml)||*.csv;*.dtd;*.html;*.htm;*.txt;*.xml||Text (*.txt)||*.txt||XML (*.xml)||*.xml||CSV (*.csv)||*.csv||DTD (*.dtd)||*.dtd||HTML (*.html, *.htm)||*.html;*.htm|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="78" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3435" top="13350" width="4470" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3435" top="13350" width="2400" height="540">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|If the HTTP get is successful, write the response body to a file|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="6765" top="13395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" visible="-1" pintype="Input" values=".zip">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" visible="-1" pintype="Input" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <NODE id="76" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <BOUNDS type="Node" left="5985" top="13890" width="840" height="270">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="DosPath">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="76" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="6900" top="7260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="-1" pintype="Input" values="packs">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|packs Dir|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="86" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="76" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output String" dstnodeid="84" dstpinname="URL">
+   </LINK>
+   <NODE systemname="Directory (File)" nodename="Directory (File)" componentmode="Hidden" id="88" filename="%VVVV%\addonpack\lib\nodes\plugins\Directory.dll">
+   <BOUNDS type="Node" left="6750" top="8325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Directory" visible="1" slicecount="1" values="..\..\..\..\">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Create" visible="1">
+   </PIN>
+   <PIN pinname="Remove" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="New Name" visible="-1" pintype="Input" slicecount="1" values="..\..\..\..\">
+   </PIN>
+   <PIN pinname="Rename" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Exists" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="7395" top="7935" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" visible="-1" pintype="Input" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Bang" dstnodeid="88" dstpinname="Create">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="88" dstpinname="Directory">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="89" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7770" top="10005" width="315" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7770" top="10005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|p4v Dir OK|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Exists" dstnodeid="89" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6390" top="8295" width="345" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6390" top="8295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|packs Dir OK|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Exists" dstnodeid="90" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Exists (File)" nodename="Exists (File)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="6870" top="11670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="91" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="92" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6225" top="11610" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6225" top="11610" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|7za.exe OK|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Exists" dstnodeid="92" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="79" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output String" dstnodeid="80" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7380" top="10800" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7380" top="10800" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="52" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="94" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5475" top="10935" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5475" top="10935" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="94" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="41" dstpinname="Input 1">
+   </LINK>
    </PATCH>

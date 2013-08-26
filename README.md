@@ -38,6 +38,9 @@ If you install Foo contribution, p4v will try to
 TODO
 ====
 
+* by now I'm using 7za.exe downloaded from [7zip site](http://www.7-zip.org/download.html), shared with my dropbox, would be cool have a native unzip node.
+* global flag, by now install locally
+* reuse patch to do HTTP get and create Get (Network) module for addonpack
 * add documentation page on vvvv site
 * p4v registry, that is just a 2 fields table: name -> url
 * .p4vignore or whatever to skip files, could be also a naming coventions on the folders structure (effects, modules, plugins) and a set of sensible defaults (skip .xml, dynamic plugins dlls etc)
